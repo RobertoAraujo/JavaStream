@@ -48,14 +48,14 @@ public class AppCompraCliente {
         Optional<ComprasCleinte> maiorCompra = comprasList.stream().max(Comparator.comparing(ComprasCleinte :: getValor));
         Optional<ComprasCleinte> menorCompra = comprasList.stream().min(Comparator.comparing(ComprasCleinte :: getValor));
 
-        Stream<ComprasCleinte> media = comprasList.stream();
-        DoubleStream doubleStream = media.mapToDouble(Produto::getValor);
+        Stream<ComprasCleinte> stream = comprasList.stream();
+        DoubleStream doubleStream = stream.mapToDouble(Produto::getValor);
         OptionalDouble optionalDouble = doubleStream.average();
+        double media = optionalDouble.orElse(0.0);
 
         System.out.println("maior "+maiorCompra);
         System.out.println("menor "+menorCompra);
-        System.out.println("Media Aqui " + optionalDouble );
-
+        System.out.println("Media Aqui " + media );
 
     }
 }
