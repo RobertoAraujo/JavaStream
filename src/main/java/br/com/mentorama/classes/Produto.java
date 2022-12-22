@@ -52,7 +52,7 @@ public class Produto {
     public String toString() {
         return "Produto{" +
                 "idProduto=" + idProduto +
-                ", nome='" + nome + "\'"+
+                ", nome='" + nome + "\'" +
                 ", quantidade=" + quantidade +
                 ", valor=" + valor +
                 '}';

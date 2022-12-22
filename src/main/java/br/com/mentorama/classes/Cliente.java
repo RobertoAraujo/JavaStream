@@ -2,9 +2,9 @@ package br.com.mentorama.classes;
 
 import java.util.Objects;
 
-public class Cliente extends Produto{
+public class Cliente extends Produto {
     private int idCliente;
-    private  String nome;
+    private String nome;
     private String cpf;
 
     public Cliente(int idCliente, String nome, String cpf, int idProduto, String nomeProduto, int quantidade, double valor) {
@@ -61,7 +61,7 @@ public class Cliente extends Produto{
                 ", nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", idProduto=" + getIdProduto() +
-                ", nomeProduto='" + getNome() + "\'"+
+                ", nomeProduto='" + getNome() + "\'" +
                 ", quantidade=" + getQuantidade() +
                 ", valor=" + getValor() +
                 '}';
